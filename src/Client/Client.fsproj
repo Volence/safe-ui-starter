@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <DefineConstants>FABLE_COMPILER</DefineConstants>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="index.html" />
+        <None Include="paket.references" />
+        <None Include="style.scss" />
+        <Compile Include="..\Shared\Shared.fs" />
+        <Compile Include="Version.fs" />
+
+        <Compile Include="./components/AppBar/AppBar.fs" />
+        <Compile Include="./components/SideNav/SideNav.fs" />
+        <Compile Include="./components/Footer/Footer.fs" />
+
+        <Compile Include="Client.fs" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Fable.Jester" Version="0.22.0" />
+      <PackageReference Include="Fable.MaterialUI" Version="4.1.0" />
+      <PackageReference Include="Fable.ReactTestingLibrary" Version="0.22.0" />
+    </ItemGroup>
+    <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

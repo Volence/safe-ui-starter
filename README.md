@@ -1,43 +1,38 @@
-# Feliz Template
+# SAFE Template
 
-This template gets you up and running with a simple web app using [Fable](http://fable.io/), [Elmish](https://fable-elmish.github.io/) and [Feliz](https://github.com/Zaid-Ajaj/Feliz).
+This template can be used to generate a full-stack web application using the [SAFE Stack](https://safe-stack.github.io/). It was created using the dotnet [SAFE Template](https://safe-stack.github.io/docs/template-overview/). If you want to learn more about the template why not start with the [quick start](https://safe-stack.github.io/docs/quickstart/) guide?
 
-## Requirements
+## Install pre-requisites
 
-* [dotnet SDK](https://www.microsoft.com/net/download/core) 2.0.0 or higher
-* [node.js](https://nodejs.org) 10.0.0 or higher
+You'll need to install the following pre-requisites in order to build SAFE applications
 
+* The [.NET Core SDK](https://www.microsoft.com/net/download)
+* The [Yarn](https://yarnpkg.com/lang/en/docs/install/) package manager (you can also use `npm` but the usage of `yarn` is encouraged).
+* [Node LTS](https://nodejs.org/en/download/) installed for the front end components.
+* If you're running on OSX or Linux, you'll also need to install [Mono](https://www.mono-project.com/docs/getting-started/install/).
 
-## Editor
+## Work with the application
 
-To write and edit your code, you can use either VS Code + [Ionide](http://ionide.io/), Emacs with [fsharp-mode](https://github.com/fsharp/emacs-fsharp-mode), [Rider](https://www.jetbrains.com/rider/) or Visual Studio.
+Before you run the project **for the first time only** you should install its local tools with this command:
 
-
-## Development
-
-Before doing anything, start with installing npm dependencies using `npm install`.
-
-Then to start development mode with hot module reloading, run:
 ```bash
-npm start
+dotnet tool restore
 ```
-This will start the development server after compiling the project, once it is finished, navigate to http://localhost:8080 to view the application .
 
-To build the application and make ready for production:
-```
-npm run build
-```
-This command builds the application and puts the generated files into the `deploy` directory (can be overwritten in webpack.config.js).
 
-### Tests
+To concurrently run the server and the client components in watch mode use the following command:
 
-The template includes a test project that ready to go which you can either run in the browser in watch mode or run in the console using node.js and mocha. To run the tests in watch mode:
+```bash
+dotnet fake build -t run
 ```
-npm run test:live
-```
-This command starts a development server for the test application and makes it available at http://localhost:8085.
 
-To run the tests using the command line and of course in your CI server, you have to use the mocha test runner which doesn't use the browser but instead runs the code using node.js:
-```
-npm test
-```
+
+## SAFE Stack Documentation
+
+You will find more documentation about the used F# components at the following places:
+
+* [Saturn](https://saturnframework.org/docs/)
+* [Fable](https://fable.io/docs/)
+* [Elmish](https://elmish.github.io/elmish/)
+
+If you want to know more about the full Azure Stack and all of it's components (including Azure) visit the official [SAFE documentation](https://safe-stack.github.io/docs/).
