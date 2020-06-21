@@ -9,7 +9,6 @@ open Giraffe
 open Saturn
 open Shared
 
-
 let tryGetEnv key =
     match Environment.GetEnvironmentVariable key with
     | x when String.IsNullOrWhiteSpace x -> None
