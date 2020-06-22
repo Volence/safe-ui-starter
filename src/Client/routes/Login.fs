@@ -8,6 +8,8 @@ open System
 open Fable.Core.JsInterop
 open Fetch.Types
 // open Client.Styles
+open Fable.MaterialUI.Core
+open Fable.MaterialUI.Props
 open FunctionalComponentView
 #if FABLE_COMPILER
 open Thoth.Json
@@ -78,6 +80,10 @@ type Props = {
     Dispatch: Msg -> unit
 }
 
+let buttonStyles = [
+    CSSProp.MarginTop "1rem"
+]
+
 let view = elmishView "Login" <| fun { Model = model; Dispatch = dispatch } ->
     let buttonActive =
         if String.IsNullOrEmpty model.Login.UserName ||
@@ -88,46 +94,43 @@ let view = elmishView "Login" <| fun { Model = model; Dispatch = dispatch } ->
         else
             "btn-primary"
 
-    div [ Key "SignIn"; ClassName "signInBox" ] [
-        h3 [ ClassName "text-center" ] [ str "Log in with 'test' / 'test'."]
+    div [] [
+        typography [
+            TypographyProp.Variant TypographyVariant.H5
+            MaterialProp.Color ComponentColor.Inherit
+        ] [
+            str "Log in with 'test' / 'test'."
+        ]
 
         // Styles.errorBox model.ErrorMsg
-
-        div [ ClassName "input-group input-group-lg" ] [
-            span [ClassName "input-group-addon" ] [
-                span [ClassName "glyphicon glyphicon-user"] []
-            ]
+        div [] [
             input [
                 Id "username"
                 HTMLAttr.Type "text"
-                ClassName "form-control input-lg"
                 Placeholder "Username"
                 DefaultValue model.Login.UserName
-                OnChange (fun ev -> dispatch (SetUserName ev.Value))
+                DOMAttr.OnChange (fun ev -> dispatch (SetUserName ev.Value))
                 AutoFocus true
             ]
         ]
-
-        div [ ClassName "input-group input-group-lg" ] [
-            span [ClassName "input-group-addon" ] [
-                span [ClassName "glyphicon glyphicon-asterisk"] []
-            ]
+        div [] [
             input [
                 Id "password"
                 Key ("password_" + model.Login.PasswordId.ToString())
                 HTMLAttr.Type "password"
-                ClassName "form-control input-lg"
                 Placeholder "Password"
                 DefaultValue model.Login.Password
-                OnChange (fun ev -> dispatch (SetPassword ev.Value))
+                DOMAttr.OnChange (fun ev -> dispatch (SetPassword ev.Value))
                 // onEnter LogInClicked dispatch
             ]
         ]
-
-        div [ ClassName "text-center" ] [
+        div [ ] [
             button [
-                ClassName ("btn " + buttonActive)
-                OnClick (fun _ -> dispatch LogInClicked) ] [
+                OnClick (fun _ -> dispatch LogInClicked)
+                ButtonProp.Variant ButtonVariant.Contained
+                MaterialProp.Color ComponentColor.Primary
+                Style buttonStyles
+            ] [
                     str "Log In"
             ]
         ]

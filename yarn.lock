@@ -990,11 +990,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
-"@fortawesome/fontawesome-free@^5.13.1":
-  version "5.13.1"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.1.tgz#c53b4066edae16cd1fd669f687baf031b45fb9d6"
-  integrity sha512-D819f34FLHeBN/4xvw0HR0u7U2G7RqjPSggXqf7LktsxWQ48VAfGwvMrhcVuaZV2fF069c/619RdgCCms0DHhw==
-
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -1326,10 +1321,10 @@
     "@babel/runtime" "^7.10.2"
     "@testing-library/dom" "^7.14.2"
 
-"@testing-library/user-event@^12.0.3":
-  version "12.0.3"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.0.3.tgz#ff14dc63a1256da6980287c250fab66008dc10d6"
-  integrity sha512-KAcrfxjT9Ok/YeiOsY2oTr0Vb1OT//LEzsVGm41DaYJT9KBPWdoRIOFtGzrc+BFjVGqy34eriVFJ5MB0DF9Ncw==
+"@testing-library/user-event@^12.0.6":
+  version "12.0.6"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.0.6.tgz#c02f64a0ec6dac5940346a8bb486828bee25c762"
+  integrity sha512-rPAlp3dCdn2kfc8qxDOdi00/4pcbfeQigCMiew0SnwbfpgbVLKwhVicjEt9Lt8eR4klbhToTZ3AVi7r10qAbNg==
   dependencies:
     "@babel/runtime" "^7.10.2"
 
@@ -2317,11 +2312,6 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
-
-bulma@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.9.0.tgz#948c5445a49e9d7546f0826cb3820d17178a814f"
-  integrity sha512-rV75CJkubNUroAt0qCRkjznZLoaXq/ctfMXsMvKSL84UetbSyx5REl96e8GoQ04G4Tkw0XF3STECffTOQrbzOQ==
 
 bytes@3.0.0:
   version "3.0.0"
@@ -6167,11 +6157,6 @@ onetime@^5.1.0:
   integrity sha512-5NcSkPHhwTVFIQN+TUqXoS5+dlElHXdpAWu9I0HP20YOtIi+aZ0Ct82jdlILDxjLEAWwvm+qj1m6aEtsDVmm6Q==
   dependencies:
     mimic-fn "^2.1.0"
-
-open-sans-fonts@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/open-sans-fonts/-/open-sans-fonts-1.6.2.tgz#71017c44a5d9ec415030ceac4560329c223cdab1"
-  integrity sha512-vsJ6/Mm0TdUKQJqxfkXJy+0K2X0QeRuTmxQq9YE1ycziw6CbDPolDsHhQ6+ImoV/7OTh8K8ZTGklY1Z5nUAwug==
 
 opn@^5.5.0:
   version "5.5.0"

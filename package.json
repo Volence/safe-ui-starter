@@ -1,29 +1,29 @@
 {
+	"name": "safe_material_ui_starter",
+	"version": "0.0.1",
     "private": true,
     "devDependencies": {
         "@babel/core": "^7.10.3",
         "@babel/plugin-transform-runtime": "^7.10.3",
         "@babel/polyfill": "^7.10.1",
         "@babel/preset-env": "^7.10.3",
-        "@babel/runtime": "^7.10.3",
-        "@fortawesome/fontawesome-free": "^5.13.1",
-        "@sinonjs/fake-timers": "^6.0.1",
+		"@babel/runtime": "^7.10.3",
+        "@babel/plugin-transform-modules-commonjs": "^7.10.1",
+		"@sinonjs/fake-timers": "^6.0.1",
+        "@testing-library/jest-dom": "^5.10.1",
         "@testing-library/react": "^10.3.0",
-        "@testing-library/user-event": "^12.0.3",
+        "@testing-library/user-event": "^12.0.6",
         "babel-loader": "^8.1.0",
-        "bulma": "^0.9.0",
         "copy-webpack-plugin": "^6.0.2",
         "core-js": "^3.6.5",
         "css-loader": "^3.6.0",
         "fable-compiler": "^2.10.1",
         "fable-loader": "^2.1.9",
         "file-loader": "^6.0.0",
-        "html-webpack-plugin": "^4.3.0",
+		"html-webpack-plugin": "^4.3.0",
+        "jest": "^26.0.1",
         "mini-css-extract-plugin": "^0.9.0",
-        "open-sans-fonts": "^1.6.2",
         "prettier": "^2.0.5",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
         "remotedev": "^0.2.9",
         "resolve-url-loader": "^3.1.1",
         "sass": "^1.26.8",
@@ -36,9 +36,18 @@
         "whatwg-fetch": "^3.0.0"
     },
     "dependencies": {
-        "@babel/plugin-transform-modules-commonjs": "^7.10.1",
-        "@material-ui/core": "^4.10.2",
-        "@testing-library/jest-dom": "^5.10.1",
-        "jest": "^26.0.1"
-    }
+		"@material-ui/core": "^4.10.2",
+		"react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "scripts": {
+        "start": "dotnet fake build -t run"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Volence/safe-ui-starter"
+	},
+	"bugs": {
+		"url": "https://github.com/Volence/safe-ui-starter/issues"
+	}
 }
